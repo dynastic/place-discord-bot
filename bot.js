@@ -17,7 +17,7 @@ client.on('message', msg => {
     let coordResults = regex.exec(msg.cleanContent);
     if(!coordResults) return;
     let x = parseInt(coordResults[1]), y = parseInt(coordResults[2]);
-    if(!x || !y || isNaN(x) || isNaN(y)) return;
+    if(x === null || y === null || isNaN(x) || isNaN(y)) return;
     if(x < 0 || y < 0 || x >= canvasSize || y >= canvasSize) return;
     let link = `${config.siteURL}/#x=${x}&y=${y}`;
     msg.channel.sendEmbed(new Discord.RichEmbed()
