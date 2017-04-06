@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const config = require("./config");
 const client = new Discord.Client();
-let regex = /\([ ]*(\1[0-9]*)[ ]*[|.\-,][ ]*(\2[0-9]*)[ ]*\)+/ig;
+let regex = /\([ ]*-?(\1[0-9]*)[ ]*[|.\-,][ ]*-?(\2[0-9]*)[ ]*\)+/ig;
 
 let canvasSize = config.canvasSize || 1000;
 if(!config.siteURL || !config.discordToken) {
