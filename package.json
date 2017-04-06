@@ -1,0 +1,12 @@
+{
+  "name": "place-discord-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for Place 2.0.",
+  "main": "app.js",
+  "scripts": {},
+  "author": "Dynastic Development",
+  "license": "AGPLv3",
+  "dependencies": {
+    "discord.js": "^11.0.0"
+  }
+}
