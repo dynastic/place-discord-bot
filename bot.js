@@ -25,7 +25,10 @@ function getCanvasImage(x, y) {
     });
 }
 
-client.on('ready', () => console.log(`Logged in as ${client.user.username}!`));
+client.on('ready', () => {
+    client.user.setAvatar("icon.png");
+    console.log(`Logged in as ${client.user.username}!`);
+});
 
 client.on('message', msg => {
     let coordResults = regex.exec(msg.cleanContent);
